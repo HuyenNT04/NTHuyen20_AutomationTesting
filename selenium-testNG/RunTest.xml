@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Suite1" verbose="1" parallel="tests" thread-count="3">
+    <!--Run all classes trong  testNG-->
+    <packages>
+        <package name="testNG"></package>
+    </packages>
+
+    <test name="Run on Chrome" preserve-order="true">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="testNG.Part_01_TestNG">
+            </class>
+        </classes>
+    </test>
+    <test name="Run on Edge">
+        <parameter name="browser" value="Edge"></parameter>
+        <classes>
+            <class name="testNG.Part_01_TestNG">
+            </class>
+        </classes>
+    </test>
+    <test name="Run on FireFox">
+        <classes>
+            <class name="testNG.Part_01_TestNG">
+            </class>
+        </classes>
+    </test>
+</suite>
